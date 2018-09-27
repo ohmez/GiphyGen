@@ -1,0 +1,118 @@
+body {
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(99, 71, 255);
+    overflow-wrap: break-word;
+    /* overflow: hidden; */
+}
+button {
+    background-color: rgb(74, 200, 122); /* Green */
+    border: none;
+    color: white;
+    padding: 1vw;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1vw;
+    margin: 1vw 1vw 1vw 1vw;
+    cursor: pointer;
+    border-radius: 1vw;
+    opacity: 0.8;
+    width: fit-content;
+    float: left;
+}
+button:hover {
+    background-color: rgb(2, 44, 18); /* Dark Green */
+    opacity: 1.5;
+    color: red;
+}
+.container {
+    max-width: 99vw;
+    min-width: 95vw;
+    border: 2px solid #FF7E47;
+    max-height: 99vh;
+    min-height: 95vh;
+    margin: auto;
+    text-transform: capitalize;
+}
+.btnArea {
+    white-space: normal;
+    float: left;
+    width: 99%;
+    overflow: hidden;
+}
+.row {
+    display: block;
+    width: 60vw;
+    padding-top: 1vh;
+    margin-left: 1vw;
+    
+}
+.col {
+    margin: auto;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin-left: 3vw;
+}
+.title {
+    text-shadow: 2px 2px black;
+    text-align: center;
+    margin: auto;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+p {
+    text-shadow: 2px 2px black;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    text-transform: capitalize;
+    word-spacing: 5px;
+    font-size: 2vw;
+}
+h6 {
+    text-shadow: 2px 2px black;
+    line-height: 1.1;
+    margin-bottom: 1px;
+}
+h1 {
+    text-shadow: 2px 2px black;
+    font-size: 4vw;
+    color: white;
+    margin: auto;
+}
+@media(max-width:1000px) {
+    img {
+        width: 150px;
+        height: 300px;
+        display: block;
+    }
+    button.answers {
+        margin: 0 1vw 0 1vw;
+        padding: 1vw;
+    }
+    p {
+        font-size: 6vw;
+    }
+    .row {
+        display: inline-flex;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+    button#startBtn {
+        font-size: 9vw;
+        margin: auto;
+        margin-left: 40vw;
+        margin-top: 10vh; 
+    }
+    .container {
+    max-width: 98vw;
+    min-width: 90vw;
+    }
+}
