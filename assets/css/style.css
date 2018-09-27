@@ -43,20 +43,28 @@ button:hover {
     overflow: hidden;
 }
 .row {
-    display: block;
-    width: 60vw;
+    display: inline-flex;
     padding-top: 1vh;
-    margin-left: 1vw;
+    margin-right: 10vw;
+    float: left;
     
 }
 .col {
     margin: auto;
+    float: right;
+    margin-right: 1vw;
 }
-
+input#input {
+    width: 100%;
+    margin-bottom: 1vh;
+}
 img {
-    width: 300px;
+    width: 200px;
     height: 300px;
-    margin-left: 3vw;
+    margin-left: 1vw;
+}
+h5 {
+    margin: 0 0 1vw 1vw;
 }
 .title {
     text-shadow: 2px 2px black;
@@ -85,7 +93,7 @@ h1 {
     color: white;
     margin: auto;
 }
-@media(max-width:1000px) {
+@media(max-width:600px) {
     img {
         width: 150px;
         height: 300px;
