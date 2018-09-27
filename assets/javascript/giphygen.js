@@ -26,16 +26,12 @@ function getGiph() {
         url: url + add + aKey,
         method: "GET"
     }).then(function(giph){
-        for (i = 0; i < 11; i ++) {
-            objs[i] = giph.data[i];
-        }
+        for (i = 0; i < 11; i ++) {objs[i] = giph.data[i];}
         setTimeout(create(),200);
         setTimeout(create2(),200);
         setTimeout(create3(),200);
         console.log(objs);
-        
     });
-    
 };
 
 function create() {
