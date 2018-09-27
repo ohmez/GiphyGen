@@ -15,7 +15,7 @@ button {
     text-decoration: none;
     display: block;
     font-size: 1vw;
-    margin: 1vw 1vw 1vw 1vw;
+    margin: .5vw .2vw 0vw .2vw;
     cursor: pointer;
     border-radius: 1vw;
     opacity: 0.8;
