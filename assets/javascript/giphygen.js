@@ -51,7 +51,7 @@ function newBtnGen() { // still need to figure out how to restrict input
 };// generates new button called from submit
 function getGiph() {
     var aKey = '&api_key=92vKLfVYVZ51WHhYfCVLwPZbuJurXFc1&limit=';
-    var url = 'http://api.giphy.com/v1/gifs/search?q=';
+    var url = 'https://api.giphy.com/v1/gifs/search?q=';
     $.ajax({
         url: url + add + aKey + limit,
         method: "GET"
