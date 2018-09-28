@@ -4,13 +4,17 @@ var add;
 var gifs = [];
 var limit = 30;
 // end global variables
+if(sessionStorage.length == 1) {
+    favs = JSON.parse(sessionStorage.fav);
+    characters = JSON.parse(sessionStorage.fav);
+}
 $(document).ready(function(event){
     buttonPop();
+    console.log(sessionStorage);    
 });// end on ready function
 $(document).on("click", ".pop", function(event) {
-    add = $(this)[0].textContent;
+    add = $(this)[0].textContent.split(" ").join("+");
     getGiph();
-    
 });// pulls value then runs ajax
 $(document).on("click", "#add", function(event) {
     event.preventDefault();
@@ -18,10 +22,8 @@ $(document).on("click", "#add", function(event) {
     favs.push($("input#input").val().trim());
     newBtnGen();
     $("input#input").val('');
-    
-    console.log(characters);
-    console.log(favs);
-});// on click that runs newbutton function
+    sessionStorage.fav = JSON.stringify(favs).split(" ");
+});// on click that runs newbutton function also stores session data
 $(document).on("click", ".gif", function(event) {
     var state = $(this).attr("data-state");
     if (state === "still") {
@@ -38,12 +40,14 @@ function buttonPop() {
     for(x=0; x<characters.length; x++) {
         $(".btnArea").append($("<button>").attr("class", "pop").text(characters[x]));
     }// end for loop
-
 };// end button populator function
-function newBtnGen() {
+function newBtnGen() { // still need to figure out how to restrict input
+    var a = JSON.stringify($("input#input").val());
+    console.log(a.length);
+    if (a.length > 1) {
     var newBtn = $("<button>").text($("input#input").val()).attr("class","pop");
     $(".btnArea").append(newBtn);
-    
+    } // ends if statment - currently not working
 };// generates new button called from submit
 function getGiph() {
     var aKey = '&api_key=92vKLfVYVZ51WHhYfCVLwPZbuJurXFc1&limit=';
@@ -56,9 +60,7 @@ function getGiph() {
         setTimeout(create(),200);
         setTimeout(create2(),200);
         setTimeout(create3(),200);
-        console.log(gifs);
-        console.log(url + add + aKey + limit);
-    });
+    });// end then function 
 };// runs ajax function stores into array 
 function create() {
     var newDivR = $("<div>").attr("class","row");
@@ -92,7 +94,7 @@ function create2() {
         var c = $("<div>").html(b);
         c.append(a);
         newDivR.append(c);
-    }   
+    }// end for loop
     $("#giphsA").append(newDivR);
 };// end create and populate giph function 2
 function create3() {
