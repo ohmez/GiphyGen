@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-color: rgb(99, 71, 255);
     overflow-wrap: break-word;
-    /* overflow: hidden; */
+    overflow: hidden scroll;
 }
 button {
     background-color: rgb(74, 200, 122); /* Green */
@@ -30,7 +30,6 @@ button:hover {
 .container {
     max-width: 99vw;
     min-width: 95vw;
-    border: 2px solid #FF7E47;
     max-height: 99vh;
     min-height: 95vh;
     margin: auto;
@@ -56,13 +55,14 @@ button:hover {
     margin-right: 1vw;
 }
 input#input {
-    width: 100%;
+    width: 50%;
     margin-bottom: 1vh;
     margin-top: 1vh;
+    margin-right: 20vw;
 }
 img {
     width: 300px;
-    height: 200px;
+    height: auto;
     margin-left: 1vw;
 }
 h5 {
@@ -95,34 +95,16 @@ h1 {
     color: white;
     margin: auto;
 }
-@media(max-width:600px) {
-    img {
-        width: 150px;
-        height: 300px;
-        display: block;
-    }
-    button.answers {
-        margin: 0 1vw 0 1vw;
-        padding: 1vw;
-    }
-    p {
-        font-size: 6vw;
-    }
-    .row {
-        display: inline-flex;
-    }
 
-    h1 {
-        font-size: 10vw;
-    }
-    button#startBtn {
-        font-size: 9vw;
-        margin: auto;
-        margin-left: 40vw;
-        margin-top: 10vh; 
+@media(min-width:100px) and (max-width:1200px) {
+    img {
+        width: 20vw;
+        height: auto;
+        margin-left: 1vw;
     }
     .container {
-    max-width: 98vw;
-    min-width: 90vw;
+    max-width: 100vw;
+    min-width: 98vw;
     }
 }
+
