@@ -22,12 +22,12 @@ $(document).on("click", "#add", function(event) {
     var a = JSON.stringify($("input#input").val().trim());
     console.log(a.length);
     if (a.length > 2) {
-    characters.push($("input#input").val().trim());
-    favs.push($("input#input").val().trim());
-    newBtnGen();
-    $("input#input").val('');
-    sessionStorage.fav = JSON.stringify(favs).trim();
-} // ends if statment - working
+        characters.push($("input#input").val().trim());
+        favs.push($("input#input").val().trim());
+        newBtnGen();
+        $("input#input").val('');
+        sessionStorage.fav = JSON.stringify(favs).trim();
+    } // ends if statment - working
     $("input#input").val('');
 });// on click that runs newbutton function also stores session data
 $(document).on("click", ".gif", function(event) {
@@ -41,7 +41,6 @@ $(document).on("click", ".gif", function(event) {
     }
 });// function/click event playing/pausing gif
 // end on clicks and doc ready's start functions 
-
 function buttonPop() {
     for(x=0; x<characters.length; x++) {
         $(".btnArea").append($("<button>").attr("class", "pop").text(characters[x]));
