@@ -3,6 +3,7 @@ var favs = [];
 var add; 
 var gifs = [];
 var limit = 30;
+var favGifs = [];
 // end global variables
 if(sessionStorage.length == 1) {
     favs = JSON.parse(sessionStorage.fav);
@@ -18,11 +19,16 @@ $(document).on("click", ".pop", function(event) {
 });// pulls value then runs ajax
 $(document).on("click", "#add", function(event) {
     event.preventDefault();
+    var a = JSON.stringify($("input#input").val().trim());
+    console.log(a.length);
+    if (a.length > 2) {
     characters.push($("input#input").val().trim());
     favs.push($("input#input").val().trim());
     newBtnGen();
     $("input#input").val('');
-    sessionStorage.fav = JSON.stringify(favs).split(" ");
+    sessionStorage.fav = JSON.stringify(favs).trim();
+} // ends if statment - working
+    $("input#input").val('');
 });// on click that runs newbutton function also stores session data
 $(document).on("click", ".gif", function(event) {
     var state = $(this).attr("data-state");
@@ -42,12 +48,9 @@ function buttonPop() {
     }// end for loop
 };// end button populator function
 function newBtnGen() { // still need to figure out how to restrict input
-    var a = JSON.stringify($("input#input").val());
-    console.log(a.length);
-    if (a.length > 1) {
     var newBtn = $("<button>").text($("input#input").val()).attr("class","pop");
     $(".btnArea").append(newBtn);
-    } // ends if statment - currently not working
+    
 };// generates new button called from submit
 function getGiph() {
     var aKey = '&api_key=92vKLfVYVZ51WHhYfCVLwPZbuJurXFc1&limit=';
@@ -60,6 +63,7 @@ function getGiph() {
         setTimeout(create(),200);
         setTimeout(create2(),200);
         setTimeout(create3(),200);
+        console.log(gifs);
     });// end then function 
 };// runs ajax function stores into array 
 function create() {
@@ -71,10 +75,13 @@ function create() {
             src: gifs[i].images.original_still.url, 
             "data-still":gifs[i].images.original_still.url,
             "data-animate":gifs[i].images.original.url,
-            "data-state": "still"
+            "data-state": "still",
+            id: gifs[i].id,
+            alt: gifs[i].title,
+            align: "middle"
         });
         var b = $("<h5>").html("rating: " + gifs[i].rating);
-        var c = $("<div>").html(b);
+        var c = $("<div>").append(b);
         c.append(a);
         newDivR.append(c);
     }  // end for loop
