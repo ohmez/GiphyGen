@@ -70,7 +70,7 @@ function create() {
     $("#giphsA").empty();
     for (i = 0; i < 3; i ++ ) {
         var a = $("<img>").attr({
-            class: 'gif',
+            class: 'gif row',
             src: gifs[i].images.original_still.url, 
             "data-still":gifs[i].images.original_still.url,
             "data-animate":gifs[i].images.original.url,
@@ -81,7 +81,14 @@ function create() {
         });
         var b = $("<h5>").html("rating: " + gifs[i].rating);
         var c = $("<div>").append(b);
+        var d = $("<button>").attr({
+                    class: 'favorite',
+                    data: JSON.stringify(gifs[i]),
+                    style: 'bottom: 1px;'
+                    
+        }).text('^Fav^');
         c.append(a);
+        c.append(d);
         newDivR.append(c);
     }  // end for loop
     $("#giphsA").append(newDivR);

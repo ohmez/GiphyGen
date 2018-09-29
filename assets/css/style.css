@@ -6,7 +6,7 @@ body {
     overflow-wrap: break-word;
     overflow: hidden scroll;
 }
-button {
+button.pop {
     background-color: rgb(74, 200, 122); /* Green */
     border: none;
     color: white;
@@ -22,7 +22,7 @@ button {
     width: fit-content;
     float: left;
 }
-button:hover {
+button.pop:hover {
     background-color: rgb(2, 44, 18); /* Dark Green */
     opacity: 1.5;
     color: red;
