@@ -14,7 +14,7 @@ button.pop {
     text-align: center;
     text-decoration: none;
     display: block;
-    font-size: 3vw;
+    font-size: 1vw;
     margin: .5vw .2vw 0vw .2vw;
     cursor: pointer;
     border-radius: 1vw;
@@ -87,27 +87,14 @@ h5 {
     margin-top: 1vh;
     margin-bottom: 2vh;
 }
-p {
-    text-shadow: 2px 2px black;
-    color: white;
-    letter-spacing: 3px;
-    line-height: 1.1;
-    text-transform: capitalize;
-    word-spacing: 5px;
-    font-size: 2vw;
+#favGifArea {
+    display: flex;
+    position: relative;
+    float: left;
+    flex-wrap: wrap;
+    width: 99vw;
+    overflow: overlay;
 }
-h6 {
-    text-shadow: 2px 2px black;
-    line-height: 1.1;
-    margin-bottom: 1px;
-}
-h1 {
-    text-shadow: 2px 2px black;
-    font-size: 4vw;
-    color: white;
-    margin: auto;
-}
-
 @media(min-width:100px) and (max-width:1400px) {
     img {
         width: 23.7vw;

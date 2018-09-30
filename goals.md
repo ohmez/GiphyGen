@@ -15,3 +15,4 @@
    * If you are looking for a major challenge, look into making this section persist even when the page is reloaded(via localStorage or cookies).
 
    // i did the buttons to stay on refresh in sessionStorage
+   // gifs now populate and stay in session storage; no local yet, I don't like it as much for now. 
