@@ -94,6 +94,7 @@ function create() {
             
 }).text('^like^');
         c.append(a);
+        c.append("<br>");
         c.append(d);
         c.append(e);
         newDivR.append(c);

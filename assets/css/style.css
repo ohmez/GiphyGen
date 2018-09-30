@@ -27,6 +27,15 @@ button.pop:hover {
     opacity: 1.5;
     color: red;
 }
+button.like {
+    background-color: rgb(74, 200, 122);
+    margin-left: 3vw;
+}
+button.favorite {
+    background-color: rgb(74, 200, 122);
+    margin-left: 4vw;
+
+}
 .container {
     max-width: 99vw;
     min-width: 95vw;
