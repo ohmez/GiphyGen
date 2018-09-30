@@ -77,22 +77,17 @@ function create() {
             "data-state": "still",
             id: gifs[i].id,
             alt: gifs[i].title,
-            align: "middle"
-        });
+            align: "middle"});// end image var
         var b = $("<h5>").html("rating: " + gifs[i].rating);
         var c = $("<div>").append(b);
         var d = $("<button>").attr({
                     class: 'favorite',
                     data: JSON.stringify(gifs[i]),
-                    style: 'bottom: 1px;'
-                    
-        }).text('^Fav^');
+                    style: 'bottom: 1px;'}).text('^Fav^');//end fav button
         var e = $("<button>").attr({
-            class: 'like',
-            data: JSON.stringify(gifs[i]),
-            style: 'bottom: 1px;'
-            
-}).text('^like^');
+                class: 'like',
+                data: JSON.stringify(gifs[i]),
+                style: 'bottom: 1px;'}).text('^like^');// end like button
         c.append(a);
         c.append("<br>");
         c.append(d);
@@ -109,11 +104,24 @@ function create2() {
             src: gifs[i].images.original_still.url, 
             "data-still":gifs[i].images.original_still.url,
             "data-animate":gifs[i].images.original.url,
-            "data-state": "still"
-        });
+            "data-state": "still",
+            id: gifs[i].id,
+            alt: gifs[i].title,
+            align: "middle"});// end image var
         var b = $("<h5>").html("rating: " + gifs[i].rating);
-        var c = $("<div>").html(b);
+        var c = $("<div>").append(b);
+        var d = $("<button>").attr({
+                    class: 'favorite',
+                    data: JSON.stringify(gifs[i]),
+                    style: 'bottom: 1px;'}).text('^Fav^');//end fav button
+        var e = $("<button>").attr({
+                class: 'like',
+                data: JSON.stringify(gifs[i]),
+                style: 'bottom: 1px;'}).text('^like^');// end like button
         c.append(a);
+        c.append("<br>");
+        c.append(d);
+        c.append(e);
         newDivR.append(c);
     }// end for loop
     $("#giphsA").append(newDivR);
@@ -126,11 +134,24 @@ function create3() {
             src: gifs[i].images.original_still.url, 
             "data-still":gifs[i].images.original_still.url,
             "data-animate":gifs[i].images.original.url,
-            "data-state": "still"
-        });
+            "data-state": "still",
+            id: gifs[i].id,
+            alt: gifs[i].title,
+            align: "middle"});// end image var
         var b = $("<h5>").html("rating: " + gifs[i].rating);
-        var c = $("<div>").html(b);
+        var c = $("<div>").append(b);
+        var d = $("<button>").attr({
+                    class: 'favorite',
+                    data: JSON.stringify(gifs[i]),
+                    style: 'bottom: 1px;'}).text('^Fav^');//end fav button
+        var e = $("<button>").attr({
+                class: 'like',
+                data: JSON.stringify(gifs[i]),
+                style: 'bottom: 1px;'}).text('^like^');// end like button
         c.append(a);
+        c.append("<br>");
+        c.append(d);
+        c.append(e);
         newDivR.append(c);
     }   // end for loop
     $("#giphsA").append(newDivR);
